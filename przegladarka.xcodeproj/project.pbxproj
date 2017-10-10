@@ -83,6 +83,7 @@
 				AC8CCA151F8C9FF50029262B /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		AC8CCA151F8C9FF50029262B /* Products */ = {
 			isa = PBXGroup;

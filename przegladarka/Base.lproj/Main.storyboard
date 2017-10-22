@@ -102,6 +102,9 @@
                                 <rect key="frame" x="170" y="434" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Zapisz"/>
+                                <connections>
+                                    <action selector="updateAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wH-gp-O8d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-H3-gLB">
                                 <rect key="frame" x="19" y="434" width="87" height="30"/>
@@ -117,11 +120,17 @@
                                 <rect key="frame" x="285" y="305" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Następny"/>
+                                <connections>
+                                    <action selector="nextAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJe-7y-sHt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-3F-FQY">
                                 <rect key="frame" x="27" y="305" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Poprzedni"/>
+                                <connections>
+                                    <action selector="prevAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tec-OH-WmC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rekord X z Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIz-0M-X5j">
                                 <rect key="frame" x="138" y="310" width="98" height="21"/>
@@ -143,7 +152,7 @@
                         <outlet property="prevButton" destination="mQy-3F-FQY" id="NMC-mU-I3p"/>
                         <outlet property="saveButton" destination="Yw2-oW-kxh" id="2ZN-9c-3Fr"/>
                         <outlet property="titleField" destination="3zo-2f-Q4H" id="xTk-QH-EKG"/>
-                        <outlet property="tracksFields" destination="xJE-sA-p3g" id="Z7Z-V8-rzI"/>
+                        <outlet property="tracksField" destination="xJE-sA-p3g" id="cuB-ni-gCG"/>
                         <outlet property="yearField" destination="cHY-gZ-e0s" id="vTn-90-oMd"/>
                     </connections>
                 </viewController>

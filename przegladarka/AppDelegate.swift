@@ -16,12 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		var data = NSMutableData();
-		let internetURL = URL(string: "https://isebi.net/albums.php")
-		var request: NSURLRequest = NSURLRequest(url: internetURL!)
-		var connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: true)!
-		connection.start()
-		
+	
         // Override point for customization after application launch.
         return true
     }

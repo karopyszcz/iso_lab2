@@ -23,13 +23,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     var currentID = 0
-    
-	let delegate = UIApplication.shared.delegate as! AppDelegate
 	var albums: [[String : Any]] = []
 	
-	//pasted from https://stackoverflow.com/questions/41163026/how-to-convert-json-string-into-array-of-dictionaries-in-ios-swift-3
 	func convertToDictionary(text: String) -> Any? {
-		
 		if let data = text.data(using: .utf8) {
 			do {
 				return try JSONSerialization.jsonObject(with: data, options: []) as? Any
@@ -37,28 +33,31 @@ class ViewController: UIViewController {
 				print(error.localizedDescription)
 			}
 		}
-		
 		return nil
 	}
     
     func updateView(){
-
+		if (albums.count == 0) {
+			(titleField.text, artistField.text, genreField.text, yearField.text, tracksField.text) = ("", "", "", "", "")
+			albumNumberLabel.text = "Brak albumów"
+			(nextButton.isEnabled, prevButton.isEnabled, deleteButton.isEnabled) = (false, false, false)
+		} else {
 			artistField.text = String (describing: (albums[currentID]["artist"])!)
 			titleField.text = String (describing: (albums[currentID]["album"])!)
 			genreField.text = String (describing: (albums[currentID]["genre"])!)
 			yearField.text = String (describing: (albums[currentID]["year"])!)
 			tracksField.text = String (describing: (albums[currentID]["tracks"])!)
-            
-            albumNumberLabel.text = "Album \(currentID+1) z \(albums.count)"
-            
-            switch currentID {
-            case 0:
-                prevButton.isEnabled = false
-            default:
-                nextButton.isEnabled = true
-                prevButton.isEnabled = true
-            }
-		saveButton.isEnabled = true
+			albumNumberLabel.text = "Rekord \(currentID+1) z \(albums.count)"
+		
+			switch currentID {
+			case 0:
+				prevButton.isEnabled = false
+			default:
+				nextButton.isEnabled = true
+				prevButton.isEnabled = true
+			}
+			saveButton.isEnabled = false
+		}
     }
 	
     override func viewDidLoad() {
@@ -88,8 +87,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextAlbum(_ sender: UIButton) {
-		currentID += 1
-		updateView()
+		if (currentID < albums.count-1){
+			currentID += 1
+			updateView()
+		} else {
+			initAlbum()
+		}
     }
     @IBAction func prevAlbum(_ sender: UIButton) {
 		currentID -= 1
@@ -101,6 +104,35 @@ class ViewController: UIViewController {
 		albums[currentID]["genre"] = genreField.text!
 		albums[currentID]["year"] = yearField.text!
 		albums[currentID]["tracks"] = tracksField.text!
+		updateView()
 	}
+	
+	@IBAction func deleteAlbum(_ sender: UIButton) {
+		albums.remove(at: self.currentID)
+		if (currentID >= albums.count) {
+			currentID -= 1
+		}
+		updateView()
+	}
+	
+	@IBAction func addAlbum(_ sender: UIButton) {
+		initAlbum()
+	}
+    
+    func initAlbum(){
+		nextButton.isEnabled = false
+		
+        currentID = albums.count
+        (artistField.text, titleField.text, genreField.text, yearField.text, tracksField.text) = ("", "", "", "", "")
+        albumNumberLabel.text = "Nowy rekord"
+        let emptyString = "" as AnyObject
+        albums.append(
+            ["artist":emptyString, "album":emptyString, "genre":emptyString, "year":emptyString, "tracks":emptyString]
+        )
+    }
+    
+    @IBAction func editedField(_ sender: UITextField) {
+        saveButton.isEnabled=true
+    }
 }
 

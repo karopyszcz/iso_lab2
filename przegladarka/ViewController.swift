@@ -24,17 +24,7 @@ class ViewController: UIViewController {
     
     var currentID = 0
 	var albums: [[String : Any]] = []
-	
-	func convertToDictionary(text: String) -> Any? {
-		if let data = text.data(using: .utf8) {
-			do {
-				return try JSONSerialization.jsonObject(with: data, options: []) as? Any
-			} catch {
-				print(error.localizedDescription)
-			}
-		}
-		return nil
-	}
+
     
     func updateView(){
 		if (albums.count == 0) {
@@ -59,27 +49,7 @@ class ViewController: UIViewController {
 			saveButton.isEnabled = false
 		}
     }
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		let url = NSURL(string: "https://isebi.net/albums.php")
-		if url != nil {
-			let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
-				if error == nil {
-					
-					let urlContent = NSString(data: data!, encoding: String.Encoding.ascii.rawValue) as NSString!
-					if let contentDict = self.convertToDictionary(text: urlContent as! String ) as? [[String : Any]] {
-						print(contentDict as Any)
-						self.albums = contentDict
-						DispatchQueue.main.async {
-							self.updateView()
-						}
-					}
-				}
-			})
-			task.resume()
-		}
-    }
+
 
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

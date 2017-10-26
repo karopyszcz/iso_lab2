@@ -14,6 +14,8 @@
 		AC8CCA221F8C9FF50029262B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8CCA201F8C9FF50029262B /* LaunchScreen.storyboard */; };
 		AC8CCA2D1F8C9FF60029262B /* przegladarkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CCA2C1F8C9FF60029262B /* przegladarkaTests.swift */; };
 		AC8CCA381F8C9FF60029262B /* przegladarkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CCA371F8C9FF60029262B /* przegladarkaUITests.swift */; };
+		D72F33351FA137880026C11B /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F33341FA137880026C11B /* MasterTableViewController.swift */; };
+		D72F33371FA13A510026C11B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F33361FA13A510026C11B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		AC8CCA331F8C9FF60029262B /* przegladarkaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = przegladarkaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8CCA371F8C9FF60029262B /* przegladarkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = przegladarkaUITests.swift; sourceTree = "<group>"; };
 		AC8CCA391F8C9FF60029262B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72F33341FA137880026C11B /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		D72F33361FA13A510026C11B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				AC8CCA171F8C9FF50029262B /* AppDelegate.swift */,
 				AC8CCA191F8C9FF50029262B /* ViewController.swift */,
 				AC8CCA1B1F8C9FF50029262B /* Main.storyboard */,
+				D72F33361FA13A510026C11B /* DetailViewController.swift */,
+				D72F33341FA137880026C11B /* MasterTableViewController.swift */,
 				AC8CCA1E1F8C9FF50029262B /* Assets.xcassets */,
 				AC8CCA201F8C9FF50029262B /* LaunchScreen.storyboard */,
 				AC8CCA231F8C9FF50029262B /* Info.plist */,
@@ -264,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8CCA1A1F8C9FF50029262B /* ViewController.swift in Sources */,
+				D72F33351FA137880026C11B /* MasterTableViewController.swift in Sources */,
 				AC8CCA181F8C9FF50029262B /* AppDelegate.swift in Sources */,
+				D72F33371FA13A510026C11B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

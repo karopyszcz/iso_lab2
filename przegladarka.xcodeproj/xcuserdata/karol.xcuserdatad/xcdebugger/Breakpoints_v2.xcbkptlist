@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "przegladarka/ViewController.swift"
+            timestampString = "531045989.900488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "przegladarka.ViewController.__deallocating_deinit"
+                  moduleName = "przegladarka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karol/Documents/iso_lab2/przegladarka/ViewController.swift"
+                  timestampString = "531045401.800891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "przegladarka.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; przegladarka.ViewController"
+                  moduleName = "przegladarka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karol/Documents/iso_lab2/przegladarka/ViewController.swift"
+                  timestampString = "531045401.816119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "przegladarka.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; przegladarka.ViewController"
+                  moduleName = "przegladarka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karol/Documents/iso_lab2/przegladarka/ViewController.swift"
+                  timestampString = "531045401.824549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "przegladarka.ViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;przegladarka.ViewController&gt;"
+                  moduleName = "przegladarka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karol/Documents/iso_lab2/przegladarka/ViewController.swift"
+                  timestampString = "531045401.832698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "przegladarka.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;przegladarka.ViewController&gt;"
+                  moduleName = "przegladarka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karol/Documents/iso_lab2/przegladarka/ViewController.swift"
+                  timestampString = "531045401.839548"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

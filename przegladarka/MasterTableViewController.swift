@@ -63,13 +63,33 @@ class MasterTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// #warning Incomplete implementation, return the number of rows
-		return 10
+		return self.albums.count
 	}
 
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+		
 
+		let titleLabel = cell.viewWithTag(1) as! UILabel
+		let artistLabel = cell.viewWithTag(2) as! UILabel
+		let yearLabel = cell.viewWithTag(3) as! UILabel
+		
+		if let albumName = albums[indexPath.row]["album"] {
+			titleLabel.text = String (describing: albumName)
+		} else {
+			titleLabel.text = ""
+		}
+		if let artistName = albums[indexPath.row]["artist"] {
+			artistLabel.text = String (describing: artistName)
+		} else {
+			artistLabel.text = ""
+		}
+		if let yearName = albums[indexPath.row]["year"] {
+			yearLabel.text = String (describing: "(\(yearName))")
+		} else {
+			yearLabel.text = ""
+		}
 		// Configure the cell...
 		
 		return cell
@@ -111,14 +131,27 @@ class MasterTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		if(segue.identifier == "showDetails"){
+			let dvc = segue.destination as! DetailViewController
+			let selected = tableView.indexPathForSelectedRow
+			
+			dvc.album = albums[(selected?.row)!] as [String : AnyObject]
+			dvc.curIndex = (selected?.row)!
+		}
+		
+		if(segue.identifier == "deleteSegue"){
+			let dvc = segue.source as! DetailViewController
+			
+			albums.remove(at: dvc.curIndex)
+		}
     }
-    */
+
 
 }
